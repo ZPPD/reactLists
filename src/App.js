@@ -42,6 +42,14 @@ class App extends Component {
    */
   handleAddItem(s) {
       // Implement this function!
+      let updatedItems = this.state.items;
+      updatedItems[s.name].push(s.newItem);
+
+      this.setState({
+        items : updatedItems
+      }, function(){
+        //console.log(this.state);
+      });
   }
 
   /**
